@@ -1,0 +1,38 @@
+import pandas as pd
+
+#creating a DataFrame
+data={
+    'Patient_ID':[1,2,3,4,5],
+    'Age':[42,24,38,32,50],
+    'Gender':['Male','Female','Female','Male','Female'],
+    'Diagnosis':['Diabetes','Hypertension','Angina','Cancer','Cardiac disorder'],
+    'Blood_pressure':['120/80','135/88',' 130/80','140/90','130/80'],
+    'Cholesterol':['Medium','High','low','Medium','low'],
+    'BMI':[23.1,30.2,25.3,18.5,29.8],
+    'Treatment':['Metformin','Lisinopril','Medication','Surgery','Surgery']
+}
+df=pd.DataFrame(data)
+print(df)
+
+import matplotlib.pyplot as plt
+Patient_ID=[1,2,3,4,5]
+BMI=[5,10,15,20,25]
+
+plt.bar(Patient_ID,BMI)
+plt.title("Bar Plot")
+plt.show()
+
+output:
+Patient_ID  Age  Gender         Diagnosis Blood_pressure Cholesterol   BMI  \
+0           1   42    Male          Diabetes         120/80      Medium  23.1   
+1           2   24  Female      Hypertension         135/88        High  30.2   
+2           3   38  Female            Angina         130/80         low  25.3   
+3           4   32    Male            Cancer         140/90      Medium  18.5   
+4           5   50  Female  Cardiac disorder         130/80         low  29.8   
+
+    Treatment  
+0   Metformin  
+1  Lisinopril  
+2  Medication  
+3     Surgery  
+4     Surgery  
